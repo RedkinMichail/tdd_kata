@@ -8,10 +8,12 @@ namespace tdd_kata
         {
             if (string.IsNullOrEmpty(input))
                 return 0;
-            else
+            if (input.Contains(","))
             {
-                return Int32.Parse(input);
+                var numbers = input.Split(',');
+                return Int32.Parse(numbers[0]) + Int32.Parse(numbers[1]);
             }
+            return Int32.Parse(input);
         }
     }
 }

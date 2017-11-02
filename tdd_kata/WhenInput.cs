@@ -29,5 +29,15 @@ namespace tdd_kata
 
             Assert.AreEqual(3,result);
         }
+
+        [Test]
+        public void FewNumbers_ResultShouldBeTheirSum()
+        {
+            var input = "3,5";
+
+            var result = StringCalculator.Add(input);
+
+            Assert.AreEqual(3 + 5, result);
+        }
 }
 }
