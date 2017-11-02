@@ -1,10 +1,17 @@
-﻿namespace tdd_kata
+﻿using System;
+
+namespace tdd_kata
 {
     internal static class StringCalculator
     {
         public static int Add(string input)
         {
-            return 0;
+            if (string.IsNullOrEmpty(input))
+                return 0;
+            else
+            {
+                return Int32.Parse(input);
+            }
         }
     }
 }

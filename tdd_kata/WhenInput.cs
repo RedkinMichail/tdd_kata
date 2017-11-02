@@ -19,13 +19,15 @@ namespace tdd_kata
 
             Assert.AreEqual(0, result);
         }
-}
 
-    internal static class StringCalculator
-    {
-        public static int Add(string input)
+        [Test]
+        public void AnyNumber_ResultShouldBeSameNumber()
         {
-            return 0;
+            var input = "3";
+
+            var result = StringCalculator.Add(input);
+
+            Assert.AreEqual(3,result);
         }
-    }
+}
 }
