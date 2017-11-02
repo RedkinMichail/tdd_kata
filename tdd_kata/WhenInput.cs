@@ -49,5 +49,15 @@ namespace tdd_kata
 
             Assert.AreEqual(4 + 6 + 30 + 1, result);
         }
+
+        [Test]
+        public void ManyNumbersWithNewLineSymbolAsDelimeter_ResultShouldBeTheirSum()
+        {
+            var input = "3\n6,1";
+
+            var result = StringCalculator.Add(input);
+
+            Assert.AreEqual(3 + 6 + 1, result);
+        }
 }
 }

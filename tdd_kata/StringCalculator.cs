@@ -11,7 +11,7 @@ namespace tdd_kata
             if (input.Contains(","))
             {
                 var result = 0;
-                var numbers = input.Split(',');
+                var numbers = input.Split(',', '\n');
                 foreach (var number in numbers)
                 {
                     result += Int32.Parse(number);
