@@ -10,8 +10,13 @@ namespace tdd_kata
                 return 0;
             if (input.Contains(","))
             {
+                var result = 0;
                 var numbers = input.Split(',');
-                return Int32.Parse(numbers[0]) + Int32.Parse(numbers[1]);
+                foreach (var number in numbers)
+                {
+                    result += Int32.Parse(number);
+                }
+                return result;
             }
             return Int32.Parse(input);
         }

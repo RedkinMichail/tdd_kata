@@ -31,13 +31,23 @@ namespace tdd_kata
         }
 
         [Test]
-        public void FewNumbers_ResultShouldBeTheirSum()
+        public void TwoNumbers_ResultShouldBeTheirSum()
         {
             var input = "3,5";
 
             var result = StringCalculator.Add(input);
 
             Assert.AreEqual(3 + 5, result);
+        }
+
+        [Test]
+        public void ManyNumbers_ResultShouldBeTheirSum()
+        {
+            var input = "4,6,30,1";
+
+            var result = StringCalculator.Add(input);
+
+            Assert.AreEqual(4 + 6 + 30 + 1, result);
         }
 }
 }
