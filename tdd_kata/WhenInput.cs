@@ -59,5 +59,15 @@ namespace tdd_kata
 
             Assert.AreEqual(3 + 6 + 1, result);
         }
+
+        [Test]
+        public void ManyNumbersWithCustomDelimetr_ResultShouldBeTheirSum()
+        {
+            var input = "//;\n1;2";
+
+            var result = StringCalculator.Add(input);
+
+            Assert.AreEqual(1 + 2, result);
+        }
 }
 }
